@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Vagas | Primeiro Passo</title>
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/pages.css">
+
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <aside class="sidebar">
+
+            <div class="logo">
+
+                <!-- IMAGEM DA LOGO -->
+
+                <img src="img/logo.png" alt="Primeiro Passo">
+
+            </div>
+
+            <nav>
+
+                <ul>
+
+                    <li onclick="location.href='dashboard.html'">
+                        Dashboard
+                    </li>
+
+                    <li onclick="location.href='perfil.html'">
+                        Meu Perfil
+                    </li>
+
+                    <li class="active">
+                        Vagas
+                    </li>
+
+                    <li onclick="location.href='curriculo.html'">
+                        Currículo IA
+                    </li>
+
+                    <li onclick="location.href='entrevista.html'">
+                        Entrevistas
+                    </li>
+
+                    <li onclick="location.href='cursos.html'">
+                        Cursos
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </aside>
+
+        <main class="content">
+
+            <h1>Vagas Disponíveis</h1>
+
+            <input
+                class="search"
+                type="text"
+                placeholder="Pesquisar vaga..."
+            >
+
+            <div class="vagas-grid">
+
+                <div class="job-card">
+
+                    <h3>Assistente Administrativo</h3>
+
+                    <p>Empresa XPTO</p>
+
+                    <span>Colatina - ES</span>
+
+                    <button class="btn-primary">
+                        Ver Vaga
+                    </button>
+
+                </div>
+
+                <div class="job-card">
+
+                    <h3>Jovem Aprendiz</h3>
+
+                    <p>Empresa ABC</p>
+
+                    <span>Remoto</span>
+
+                    <button class="btn-primary">
+                        Ver Vaga
+                    </button>
+
+                </div>
+
+                <div class="job-card">
+
+                    <h3>Estágio em TI</h3>
+
+                    <p>Startup Tech</p>
+
+                    <span>Vitória - ES</span>
+
+                    <button class="btn-primary">
+                        Ver Vaga
+                    </button>
+
+                </div>
+
+                <div class="job-card">
+
+                    <h3>Auxiliar de Escritório</h3>
+
+                    <p>Empresa Delta</p>
+
+                    <span>Linhares - ES</span>
+
+                    <button class="btn-primary">
+                        Ver Vaga
+                    </button>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="js/vagas.js"></script>
+
+</body>
+
+</html>

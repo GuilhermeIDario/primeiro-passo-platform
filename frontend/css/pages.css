@@ -1,0 +1,68 @@
+.profile-form,
+#curriculoForm {
+
+display:flex;
+flex-direction:column;
+gap:15px;
+
+margin-top:25px;
+}
+
+.profile-form input,
+.profile-form textarea,
+#curriculoForm textarea,
+.search,
+#userInput {
+
+padding:15px;
+
+border:1px solid #CBD5E1;
+
+border-radius:10px;
+}
+
+.vagas-grid,
+.courses-grid {
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(250px,1fr));
+
+gap:20px;
+
+margin-top:30px;
+}
+
+.job-card,
+.course-card,
+.resultado,
+.chat {
+
+background:white;
+
+padding:25px;
+
+border-radius:15px;
+
+box-shadow:
+0 5px 15px rgba(0,0,0,.05);
+}
+
+.chat {
+
+display:flex;
+
+flex-direction:column;
+
+gap:15px;
+}
+
+.bot-message {
+
+background:#DBEAFE;
+
+padding:15px;
+
+border-radius:10px;
+}

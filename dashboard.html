@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dashboard | Primeiro Passo">
+  <title>Dashboard | Primeiro Passo</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="dashboard">
+
+  <!-- SIDEBAR — populated by sidebar.js -->
+  <aside class="sidebar" id="sidebar" role="navigation" aria-label="Menu lateral"></aside>
+
+  <main class="content">
+
+    <!-- TOPBAR — populated by sidebar.js -->
+    <header class="topbar" role="banner"></header>
+
+    <div class="page-body">
+
+      <!-- Stat cards -->
+      <section class="cards" aria-label="Resumo do perfil">
+        <div class="card">
+          <div class="card-icon" aria-hidden="true">💼</div>
+          <h3>Vagas Compatíveis</h3>
+          <span>27</span>
+        </div>
+        <div class="card">
+          <div class="card-icon" aria-hidden="true">📚</div>
+          <h3>Cursos Recomendados</h3>
+          <span>12</span>
+        </div>
+        <div class="card">
+          <div class="card-icon" aria-hidden="true">🎤</div>
+          <h3>Entrevistas Treinadas</h3>
+          <span>3</span>
+        </div>
+        <div class="card">
+          <div class="card-icon" aria-hidden="true">✅</div>
+          <h3>Perfil Completo</h3>
+          <span>75%</span>
+        </div>
+      </section>
+
+      <!-- Dashboard grid -->
+      <section class="dashboard-grid">
+
+        <div class="box">
+          <h2>Vagas Recomendadas</h2>
+
+          <div class="vaga" role="article">
+            <h4>Assistente Administrativo</h4>
+            <p>Empresa XPTO • Colatina - ES</p>
+          </div>
+
+          <div class="vaga" role="article">
+            <h4>Jovem Aprendiz</h4>
+            <p>Empresa ABC • Remoto</p>
+          </div>
+
+          <div class="vaga" role="article">
+            <h4>Estágio em TI</h4>
+            <p>Startup Tech • Vitória - ES</p>
+          </div>
+
+        </div>
+
+        <div class="box">
+          <h2>Próximos Passos</h2>
+          <ul>
+            <li onclick="location.href='perfil.html'" tabindex="0">Completar Perfil</li>
+            <li onclick="location.href='curriculo.html'" tabindex="0">Gerar Currículo</li>
+            <li onclick="location.href='entrevista.html'" tabindex="0">Fazer Simulação</li>
+            <li onclick="location.href='vagas.html'" tabindex="0">Aplicar para Vagas</li>
+          </ul>
+        </div>
+
+      </section>
+
+    </div>
+
+  </main>
+
+</div>
+
+<script src="js/sidebar.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>

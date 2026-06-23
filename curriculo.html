@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gerador de Currículo com IA | Primeiro Passo">
+  <title>Currículo IA | Primeiro Passo</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="dashboard">
+
+  <aside class="sidebar" id="sidebar" role="navigation" aria-label="Menu lateral"></aside>
+
+  <main class="content">
+
+    <header class="topbar" role="banner"></header>
+
+    <div class="page-body">
+
+      <div class="page-header">
+        <h1>Currículo Inteligente</h1>
+        <p>Preencha as informações abaixo e a IA gerará seu currículo profissional.</p>
+      </div>
+
+      <div class="curriculo-layout">
+
+        <!-- Form -->
+        <form id="curriculoForm" novalidate>
+
+          <div class="input-group">
+            <label for="curriculoSobre">Sobre você</label>
+            <textarea
+              id="curriculoSobre"
+              placeholder="Fale sobre você: sua trajetória, interesses e objetivos profissionais..."
+              rows="5"
+              required
+            ></textarea>
+            <span class="input-error-msg" role="alert"></span>
+          </div>
+
+          <div class="input-group">
+            <label for="curriculoHabilidades">Habilidades</label>
+            <textarea
+              id="curriculoHabilidades"
+              placeholder="Liste suas habilidades técnicas e interpessoais (separadas por vírgula ou linha)"
+              rows="4"
+            ></textarea>
+          </div>
+
+          <div class="input-group">
+            <label for="curriculoCursos">Cursos e Formação</label>
+            <textarea
+              id="curriculoCursos"
+              placeholder="Cursos realizados, certificações, formação escolar..."
+              rows="4"
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary">Gerar Currículo</button>
+
+        </form>
+
+        <!-- Result -->
+        <div class="resultado">
+          <h2>Currículo Gerado</h2>
+
+          <div class="resultado-placeholder">
+            <svg width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+              <polyline points="10 9 9 9 8 9"/>
+            </svg>
+            <p>Preencha o formulário e clique em "Gerar Currículo".</p>
+          </div>
+
+          <pre class="resultado-content" style="display:none" aria-live="polite"></pre>
+
+          <div class="resultado-actions" style="display:none">
+            <button id="copyBtn" class="btn-outline">Copiar Texto</button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+</div>
+
+<script src="js/sidebar.js"></script>
+<script src="js/curriculo.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Simulação de Entrevista com IA | Primeiro Passo">
+  <title>Entrevistas | Primeiro Passo</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="dashboard">
+
+  <aside class="sidebar" id="sidebar" role="navigation" aria-label="Menu lateral"></aside>
+
+  <main class="content">
+
+    <header class="topbar" role="banner"></header>
+
+    <div class="page-body">
+
+      <div class="page-header">
+        <h1>Simulação de Entrevista</h1>
+        <p>Pratique com o assistente IA e melhore suas respostas para entrevistas reais.</p>
+      </div>
+
+      <div class="chat-layout">
+
+        <div class="chat-info" role="note">
+          💡 Responda as perguntas como se estivesse em uma entrevista real. Pressione <strong>Enter</strong> para enviar.
+        </div>
+
+        <!-- Chat window -->
+        <section class="chat" aria-label="Chat de simulação de entrevista">
+
+          <div class="chat-messages" id="chatMessages" role="log" aria-live="polite" aria-label="Mensagens da entrevista">
+            <div class="bot-message">Fale um pouco sobre você.</div>
+          </div>
+
+          <div class="chat-input-area">
+            <label for="userInput" class="sr-only">Sua resposta</label>
+            <input
+              id="userInput"
+              type="text"
+              placeholder="Digite sua resposta..."
+              autocomplete="off"
+              maxlength="500"
+            >
+            <button id="sendBtn" class="btn-primary" aria-label="Enviar resposta">
+              Enviar
+            </button>
+          </div>
+
+        </section>
+
+      </div>
+
+    </div>
+
+  </main>
+
+</div>
+
+<script src="js/sidebar.js"></script>
+<script src="js/entrevista.js"></script>
+</body>
+</html>

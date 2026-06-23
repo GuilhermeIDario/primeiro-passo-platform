@@ -1,11 +1,183 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=frontend/index.html">
-    <title>Primeiro Passo</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Primeiro Passo — Conectamos jovens ao primeiro emprego com IA e tecnologia.">
+  <title>Primeiro Passo</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    Redirecionando...
+
+<header>
+  <div class="container navbar">
+
+    <a href="index.html" class="logo" aria-label="Primeiro Passo — página inicial">
+      <img src="img/logo.png" alt="logo primeiro passo">
+      <p>Primeiro Passo</p>
+    </a>
+
+    <nav aria-label="Navegação principal">
+      <ul class="menu">
+        <li><a href="#">Início</a></li>
+        <li><a href="#funciona">Como Funciona</a></li>
+        <li><a href="#recursos">Recursos</a></li>
+        <li><a href="#">Empresas</a></li>
+      </ul>
+    </nav>
+
+    <div class="actions">
+      <a href="login.html" class="btn-outline">Entrar</a>
+      <a href="cadastro.html" class="btn-primary">Criar Conta</a>
+    </div>
+
+    <button
+      class="hamburger"
+      aria-label="Abrir menu"
+      aria-expanded="false"
+      aria-controls="mobileNav"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+</header>
+
+<nav id="mobileNav" class="mobile-nav" aria-label="Menu mobile">
+  <a href="#">Início</a>
+  <a href="#funciona">Como Funciona</a>
+  <a href="#recursos">Recursos</a>
+  <a href="#">Empresas</a>
+  <div class="mobile-actions">
+    <a href="login.html" class="btn-outline">Entrar</a>
+    <a href="cadastro.html" class="btn-primary">Criar Conta</a>
+  </div>
+</nav>
+
+<main>
+  <section class="hero">
+    <div class="container hero-content">
+
+      <div class="hero-text">
+        <h1>
+          Conectamos jovens ao
+          <span>primeiro emprego</span>
+          com IA e tecnologia
+        </h1>
+        <p>
+          Plataforma que ajuda estudantes e jovens profissionais a encontrarem
+          oportunidades compatíveis com seu perfil.
+        </p>
+        <div class="hero-buttons">
+          <a href="cadastro.html" class="btn-primary">Criar Perfil</a>
+          <a href="#recursos" class="btn-outline">Ver Recursos</a>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <!-- HERO IMAGE -->
+        <img src="img/hero.png" alt="Jovens profissionais usando a plataforma Primeiro Passo">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats" aria-label="Números da plataforma">
+    <div class="container stats-grid">
+      <div class="stat-card">
+        <h2>+12M</h2>
+        <p>Jovens buscando o primeiro emprego.</p>
+      </div>
+      <div class="stat-card">
+        <h2>+150K</h2>
+        <p>Oportunidades disponíveis</p>
+      </div>
+      <div class="stat-card">
+        <h2>+20</h2>
+        <p>Empresas parceiras</p>
+      </div>
+      <div class="stat-card">
+        <h2>70%</h2>
+        <p>Taxa de compatibilidade</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="funciona" class="how">
+    <div class="container">
+      <h2>Como funciona?</h2>
+      <div class="steps">
+        <div class="step">
+          <span aria-hidden="true">1</span>
+          <h3>Crie sua conta</h3>
+        </div>
+        <div class="step">
+          <span aria-hidden="true">2</span>
+          <h3>Complete seu perfil</h3>
+        </div>
+        <div class="step">
+          <span aria-hidden="true">3</span>
+          <h3>IA analisa seu perfil</h3>
+        </div>
+        <div class="step">
+          <span aria-hidden="true">4</span>
+          <h3>Receba vagas ideais</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="recursos" class="features">
+    <div class="container">
+      <h2>Recursos da Plataforma</h2>
+      <div class="feature-grid">
+
+        <div class="feature-card">
+          <div class="feature-icon" aria-hidden="true">🎯</div>
+          <h3>Vagas Inteligentes</h3>
+          <p>Recomendações personalizadas baseadas no seu perfil e habilidades.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon" aria-hidden="true">📄</div>
+          <h3>Currículo IA</h3>
+          <p>Criação automática de currículo profissional com inteligência artificial.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon" aria-hidden="true">🎤</div>
+          <h3>Entrevista IA</h3>
+          <p>Treinamento interativo para entrevistas com feedback em tempo real.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon" aria-hidden="true">📚</div>
+          <h3>Cursos Recomendados</h3>
+          <p>Aprenda o que o mercado pede com cursos selecionados para você.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container footer-content">
+    <h3>Primeiro Passo</h3>
+    <p>Seu futuro começa com uma oportunidade.</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>

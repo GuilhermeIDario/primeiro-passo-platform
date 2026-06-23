@@ -1,0 +1,509 @@
+/* =============================================
+   PRIMEIRO PASSO — pages.css
+   Inner dashboard pages: Perfil, Vagas, Currículo IA,
+   Cursos, Entrevista.
+   ============================================= */
+
+/* --- Page header --- */
+.page-header {
+  margin-bottom: var(--space-6);
+}
+
+.page-header h1 {
+  font-size: clamp(var(--text-xl), 3vw, var(--text-2xl));
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-2);
+}
+
+.page-header p {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+/* ===========================
+   PERFIL
+   =========================== */
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  max-width: 640px;
+}
+
+.profile-form .input-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.profile-form .btn-primary {
+  align-self: flex-start;
+  padding: 0.7rem var(--space-8);
+}
+
+/* Progress bar (perfil) */
+.profile-progress {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5) var(--space-6);
+  margin-bottom: var(--space-6);
+  max-width: 640px;
+}
+
+.profile-progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-3);
+}
+
+.profile-progress-header span:first-child {
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+.profile-progress-header span:last-child {
+  font-size: var(--text-sm);
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.progress-bar-wrap {
+  height: 6px;
+  background: var(--color-surface-2);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #2563EB, #60A5FA);
+  border-radius: var(--radius-full);
+  transition: width 0.6s ease;
+}
+
+/* ===========================
+   VAGAS
+   =========================== */
+.search-bar {
+  position: relative;
+  margin-bottom: var(--space-6);
+  max-width: 520px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 0.7rem var(--space-4) 0.7rem 2.8rem;
+  background: var(--color-surface);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+  font-size: var(--text-sm);
+  transition:
+    border-color var(--transition),
+    box-shadow var(--transition);
+}
+
+.search-bar input::placeholder { color: var(--color-text-muted); }
+
+.search-bar input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+.search-bar svg {
+  position: absolute;
+  left: var(--space-4);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-muted);
+  pointer-events: none;
+}
+
+.vagas-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+.job-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5) var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  transition:
+    border-color var(--transition),
+    transform var(--transition),
+    box-shadow var(--transition);
+}
+
+.job-card:hover {
+  border-color: rgba(79, 70, 229, 0.4);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.job-card h3 {
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.job-card p {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.job-card-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.job-card span {
+  font-size: var(--text-xs);
+  color: var(--color-primary);
+  background: rgba(79, 70, 229, 0.1);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  font-weight: 500;
+}
+
+.job-card .job-type {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  background: var(--color-surface-2);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+}
+
+.job-card .btn-primary {
+  align-self: flex-start;
+  padding: 0.5rem var(--space-5);
+  font-size: var(--text-xs);
+  margin-top: var(--space-2);
+}
+
+/* ===========================
+   CURRÍCULO IA
+   =========================== */
+.curriculo-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+  align-items: start;
+}
+
+#curriculoForm {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+#curriculoForm .input-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+#curriculoForm .btn-primary {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: var(--text-base);
+}
+
+.resultado {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  min-height: 300px;
+  position: relative;
+}
+
+.resultado h2 {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  margin-bottom: var(--space-5);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.resultado-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  min-height: 200px;
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+.resultado-placeholder svg {
+  opacity: 0.3;
+}
+
+.resultado-content {
+  font-size: var(--text-sm);
+  color: var(--color-text-soft);
+  line-height: 1.8;
+  white-space: pre-wrap;
+}
+
+.resultado-actions {
+  display: flex;
+  gap: var(--space-3);
+  margin-top: var(--space-5);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+  flex-wrap: wrap;
+}
+
+/* ===========================
+   CURSOS
+   =========================== */
+.courses-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+.course-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  transition:
+    border-color var(--transition),
+    transform var(--transition),
+    box-shadow var(--transition);
+}
+
+.course-card:hover {
+  border-color: rgba(79, 70, 229, 0.4);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.course-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: rgba(79, 70, 229, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+}
+
+.course-card h3 {
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.course-card p {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  flex: 1;
+}
+
+.course-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  flex-wrap: wrap;
+}
+
+.course-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  background: rgba(79, 70, 229, 0.1);
+  color: var(--color-primary);
+}
+
+.course-card .btn-primary {
+  align-self: flex-start;
+  padding: 0.5rem var(--space-5);
+  font-size: var(--text-xs);
+}
+
+/* ===========================
+   ENTREVISTA IA
+   =========================== */
+.chat-layout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  max-width: 760px;
+}
+
+.chat-info {
+  background: rgba(79, 70, 229, 0.08);
+  border: 1px solid rgba(79, 70, 229, 0.2);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4) var(--space-5);
+  font-size: var(--text-sm);
+  color: var(--color-text-soft);
+}
+
+.chat {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  height: clamp(400px, 55vh, 600px);
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  scroll-behavior: smooth;
+}
+
+.chat-messages::-webkit-scrollbar { width: 4px; }
+
+.bot-message,
+.user-message {
+  max-width: 85%;
+  padding: var(--space-4) var(--space-5);
+  border-radius: var(--radius-lg);
+  font-size: var(--text-sm);
+  line-height: 1.7;
+  animation: msgIn 0.25s ease;
+}
+
+@keyframes msgIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.bot-message {
+  background: var(--color-surface-2);
+  color: var(--color-text-soft);
+  align-self: flex-start;
+  border-bottom-left-radius: var(--radius-sm);
+}
+
+.user-message {
+  background: rgba(79, 70, 229, 0.15);
+  border: 1px solid rgba(79, 70, 229, 0.2);
+  color: var(--color-text);
+  align-self: flex-end;
+  border-bottom-right-radius: var(--radius-sm);
+}
+
+/* Typing indicator */
+.typing-indicator {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  padding: var(--space-4) var(--space-5);
+  background: var(--color-surface-2);
+  border-radius: var(--radius-lg);
+  border-bottom-left-radius: var(--radius-sm);
+  align-self: flex-start;
+  width: fit-content;
+}
+
+.typing-indicator span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-text-muted);
+  animation: typingBounce 1.2s ease infinite;
+}
+
+.typing-indicator span:nth-child(2) { animation-delay: 0.2s; }
+.typing-indicator span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes typingBounce {
+  0%, 60%, 100% { transform: translateY(0); }
+  30%           { transform: translateY(-6px); }
+}
+
+/* Chat input area */
+.chat-input-area {
+  display: flex;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border-top: 1px solid var(--color-border);
+  align-items: flex-end;
+}
+
+.chat-input-area input {
+  flex: 1;
+  padding: 0.7rem var(--space-4);
+  background: var(--color-surface-2);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+  font-size: var(--text-sm);
+  transition: border-color var(--transition), box-shadow var(--transition);
+  min-width: 0;
+}
+
+.chat-input-area input::placeholder { color: var(--color-text-muted); }
+
+.chat-input-area input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+.chat-input-area .btn-primary {
+  padding: 0.7rem var(--space-5);
+  font-size: var(--text-sm);
+  flex-shrink: 0;
+}
+
+/* Score / feedback panel */
+.feedback-panel {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+}
+
+.feedback-panel h3 {
+  font-size: var(--text-base);
+  font-weight: 700;
+  margin-bottom: var(--space-5);
+}
+
+/* === Responsive === */
+@media (min-width: 640px) {
+  .vagas-grid     { grid-template-columns: repeat(2, 1fr); }
+  .courses-grid   { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1024px) {
+  .curriculo-layout { grid-template-columns: 1fr 1fr; }
+  .vagas-grid       { grid-template-columns: repeat(3, 1fr); }
+  .courses-grid     { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1280px) {
+  .courses-grid { grid-template-columns: repeat(4, 1fr); }
+}

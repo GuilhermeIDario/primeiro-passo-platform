@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Entrar na sua conta Primeiro Passo.">
+  <title>Entrar | Primeiro Passo</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/auth.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="auth-container">
+
+  <!-- LEFT: illustration -->
+  <div class="auth-left" aria-hidden="true">
+    <!-- LOGIN ILLUSTRATION -->
+    <img src="img/login.png" alt="">
+  </div>
+
+  <!-- RIGHT: form -->
+  <div class="auth-right">
+    <div class="auth-card">
+
+      <a href="index.html" class="auth-logo">
+        <!-- LOGO -->
+        <img src="imagens/logo-fazer.png" alt="">
+        Primeiro Passo
+      </a>
+
+      <div>
+        <h1>Bem-vindo de volta</h1>
+        <p>Entre para continuar sua jornada profissional.</p>
+      </div>
+
+      <form id="loginForm" novalidate>
+
+        <div class="input-group">
+          <label for="loginEmail">E-mail</label>
+          <input
+            id="loginEmail"
+            type="email"
+            placeholder="seu@email.com"
+            autocomplete="email"
+            required
+          >
+          <span class="input-error-msg" role="alert"></span>
+        </div>
+
+        <div class="input-group">
+          <label for="loginPassword">Senha</label>
+          <div class="input-password-wrap">
+            <input
+              id="loginPassword"
+              type="password"
+              placeholder="Sua senha"
+              autocomplete="current-password"
+              required
+            >
+            <button
+              type="button"
+              class="toggle-password"
+              aria-label="Mostrar senha"
+            >
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                <circle cx="12" cy="12" r="3"/>
+              </svg>
+            </button>
+          </div>
+          <span class="input-error-msg" role="alert"></span>
+        </div>
+
+        <button type="submit" class="btn-primary">Entrar</button>
+
+      </form>
+
+      <span>
+        Não possui conta?
+        <a href="cadastro.html">Criar Conta</a>
+      </span>
+
+    </div>
+  </div>
+
+</div>
+
+<script src="js/auth.js"></script>
+</body>
+</html>
